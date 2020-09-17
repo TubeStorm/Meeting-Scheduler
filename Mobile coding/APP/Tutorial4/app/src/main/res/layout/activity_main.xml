@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/openActivityc"
+        style="@style/button"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="15dp"
+        android:elevation="0dp"
+        android:shadowColor="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop"/>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/blue"
+
+        android:fitsSystemWindows="true"
+
+        android:foregroundGravity="center"
+        app:elevation="1dp"
+        app:itemTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/navigation"></android.support.design.widget.BottomNavigationView>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navigation"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fragment_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lightblue"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/myYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="2019"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/myDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="9dp"
+                    android:background="#00019AE8"
+                    android:fontFamily="@font/roboto_medium"
+                    android:foregroundGravity="left"
+                    android:gravity="left"
+                    android:text="Mon, Apr 10"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="293dp"
+                android:layout_gravity="top"
+                android:background="@color/white"
+                android:foregroundGravity="top"
+                android:gravity="top">
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="293dp"
+                    android:background="#00FFFFFF"
+                    android:unfocusedMonthDateColor="#FFFFFF"
+                    android:weekNumberColor="#FFFFFF"
+                    android:weekSeparatorLineColor="#FFFFFF"></CalendarView>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="423dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

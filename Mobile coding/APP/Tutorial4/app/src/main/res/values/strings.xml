@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Meeting Scheduler</string>
+    <string name="title_home">Meeting Scheduler</string>
+    <string name="title_calendar">CALENDAR</string>
+    <string name="title_schedule">ADD EVENT</string>
+    <string name="title_upcoming">UP COMING</string>
+    <string name="title_settings">Settings</string>
+    <string name="add_event">Add event</string>
+</resources>
